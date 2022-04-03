@@ -13,7 +13,7 @@
 * This can be answered through hypothesis testing, where H<sub>0</sub> and H<sub>a</sub> are as follows:
 
 <p align="center">
-<img src="/Resources/hypothesis_testing_slope.png" width="55%" height="15%">
+<img src="/Resources/hypothesis_testing_slope.png" width="47%" height="12%">
 </p>
 
 * The p-value is 5.35e-11 in the above linear model, which is less than the assumed significance level of 0.05, therefore the null hypothesis (H<sub>0</sub>) can be rejected and it is concluded that **the slope is not zero.**
@@ -122,4 +122,4 @@ If the p-value is less than the significance level of 0.05, then MechaCar is dif
 
 **Statistical Test:** Because there are many variables involved in a vehicle's performance, a Multiple Linear Regression model would be used determine the dependence on each variable. A **one-way ANOVA test** will be used to compare performance of different competitive cars with MechaCar.
 
-**Data:** To use to <span style="color: red">```aov()``` </span> function in R, we need a dataframe where the data is contatined in columns, as well as the knowledge of dependent and independent variables (which will be input as <span style="color: red">```Y ~ A + B``` </span> where A & B are columns of independent variables and Y is the dependent variable)
+**Data:** To use to ```aov()``` function in R, we need a dataframe where the data is contatined in columns, as well as the knowledge of dependent and independent variables (which will be input as ```Y ~ A + B``` where A & B are columns of independent variables and Y is the dependent variable)
