@@ -16,7 +16,7 @@
 <img src="/Resources/hypothesis_testing_slope.png" width="55%" height="20%">
 </p>
 
-* The p-value is 5.35e-11 in the above linear model, which is less than the assumed significance level of 0.05%, therefore the null hypothesis (H<sub>0</sub>) can be rejected and it is concluded that **the slope is not zero.**
+* The p-value is 5.35e-11 in the above linear model, which is less than the assumed significance level of 0.05, therefore the null hypothesis (H<sub>0</sub>) can be rejected and it is concluded that **the slope is not zero.**
 
 `3. Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?`
 * This linear model results in an R-squared value of 0.7149, which means that about 72% of the 'mpg' lie within the modeled line. This means the 72% of all mpg values can be determined by this model, thus making it **able to predict mpg of MechaCar prototypes effectively** 
@@ -26,7 +26,7 @@
 
 #### Total Summary Table
 <p align="left">
-<img src="/Resources/total_summary.png" width="55%" height="12%">
+<img src="/Resources/total_summary.png" width="50%" height="10%">
 </p>
 
 * The mean and the median of all vehicles across the three lots is almost the same, therefore the distribution is symmetrical and not skewed to either side. Being normally distributed, various statistical analyses can be performed on the given data. 
@@ -41,7 +41,7 @@
 
 #### Lot Summary Table
 <p align="left">
-<img src="/Resources/lot_summary.png" width="60%" height="35%">
+<img src="/Resources/lot_summary.png" width="65%" height="40%">
 </p>
 
 Even when the data is studied split according to the lots, the distribution remains normal, thus making it favourable for different analyses.
@@ -53,14 +53,14 @@ Even when the data is studied split according to the lots, the distribution rema
 
 ## T-Tests on Suspension Coils
 
-This analysis assumes a significance level of 0.05% and the following hypotheses:
+This analysis assumes a significance level of 0.05 and the following hypotheses:
 <p align="center">
 <img src="/Resources/hypothesis_testing_ttest.png" width="55%" height="15%">
 </p>
 
 #### T-test for entire data
 <p align="center">
-<img src="/Resources/t_test.png" width="40%" height="30%">
+<img src="/Resources/t_test.png" width="55%" height="35%">
 </p>
 
 | Attribute | Conclusion |
@@ -70,7 +70,7 @@ This analysis assumes a significance level of 0.05% and the following hypotheses
 
 #### T-test for Lot 1
 <p align="center">
-<img src="/Resources/lot_1_ttest.png" width="50%" height="35%">
+<img src="/Resources/lot_1_ttest.png" width="55%" height="35%">
 </p>
 
 | Attribute | Conclusion |
@@ -79,7 +79,7 @@ This analysis assumes a significance level of 0.05% and the following hypotheses
 
 #### T-test for Lot 2
 <p align="center">
-<img src="/Resources/lot_2_ttest.png" width="40%" height="30%">
+<img src="/Resources/lot_2_ttest.png" width="55%" height="35%">
 </p>
 
 | Attribute | Conclusion |
@@ -88,13 +88,37 @@ This analysis assumes a significance level of 0.05% and the following hypotheses
 
 #### T-test for Lot 3
 <p align="center">
-<img src="/Resources/lot_3_ttest.png" width="40%" height="30%">
+<img src="/Resources/lot_3_ttest.png" width="55%" height="35%">
 </p>
 
 | Attribute | Conclusion |
 | --- | --- |
-| p-value = 0.04168 <br> More than significance level | CAN reject null hypothesis(H<sub>0</sub>) |
+| p-value = 0.04168 <br> Less than significance level | CAN reject null hypothesis(H<sub>0</sub>) |
 
 Therefore, in the case of Lot 3, there is a statistical difference between the observed sample mean and its presumed population mean.
 
+It is possible that Lot 3's vehicles need to be re-assessed to ensure that their production, testing and measuring followed the same procedures as the other two lots'.
+
 ## Study Design: MechaCar vs Competition
+
+
+**Metrics:** 
+1. Fuel Efficiency (ciyt & highway)
+2. Yearly Depreciation in Value 
+3. Horsepower
+4. Safety Features
+5. Insurance cost for the car
+
+
+**Hypothesis:** Means of a chosen performance attribute of different cars will be compared tot thte mean of MechaCar
+
+> H<sub>0</sub>: means of all cars are the equal, μ<sub>1</sub> = μ<sub>2</sub> = ...... μ<sub>MechaCar</sub>
+> H<sub>a</sub>: At least one of the means is differentt from all other groups.
+
+If the p-value is more than the significance level of 0.05, then MechaCar performs as well as its competitors. 
+
+If the p-value is less than the significance level of 0.05, then MechaCar is different from the competitors it is being compared with. Depending on the average of the attributet being considered, it can be determined if MechaCar performs better or worse thtan its competitors.
+
+**Statistical Test:** Because there are many variables involved in a vehicle's performance, a Multiple Linear Regression model would be used determine the dependence on each variable. A **one-way ANOVA test** will be used to compare performance of different competitive cars with MechaCar.
+
+**Data:** To use to ```aov()``` function in R, we need a dataframe where the data is contatined in columns, as well as the knowledge of dependent and independent variables (which will be input as ```Y ~ A + B``` where A & B are columns of independent variables and Y is the dependent variable)
