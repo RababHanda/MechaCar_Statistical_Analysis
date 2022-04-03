@@ -13,7 +13,7 @@
 * This can be answered through hypothesis testing, where H<sub>0</sub> and H<sub>a</sub> are as follows:
 
 <p align="center">
-<img src="/Resources/hypothesis_testing_slope.png" width="55%" height="20%">
+<img src="/Resources/hypothesis_testing_slope.png" width="55%" height="15%">
 </p>
 
 * The p-value is 5.35e-11 in the above linear model, which is less than the assumed significance level of 0.05, therefore the null hypothesis (H<sub>0</sub>) can be rejected and it is concluded that **the slope is not zero.**
@@ -26,7 +26,7 @@
 
 #### Total Summary Table
 <p align="left">
-<img src="/Resources/total_summary.png" width="50%" height="10%">
+<img src="/Resources/total_summary.png" width="45%" height="10%">
 </p>
 
 * The mean and the median of all vehicles across the three lots is almost the same, therefore the distribution is symmetrical and not skewed to either side. Being normally distributed, various statistical analyses can be performed on the given data. 
@@ -113,6 +113,7 @@ It is possible that Lot 3's vehicles need to be re-assessed to ensure that their
 **Hypothesis:** Means of a chosen performance attribute of different cars will be compared tot thte mean of MechaCar
 
 > H<sub>0</sub>: means of all cars are the equal, μ<sub>1</sub> = μ<sub>2</sub> = ...... μ<sub>MechaCar</sub>
+
 > H<sub>a</sub>: At least one of the means is differentt from all other groups.
 
 If the p-value is more than the significance level of 0.05, then MechaCar performs as well as its competitors. 
@@ -121,4 +122,4 @@ If the p-value is less than the significance level of 0.05, then MechaCar is dif
 
 **Statistical Test:** Because there are many variables involved in a vehicle's performance, a Multiple Linear Regression model would be used determine the dependence on each variable. A **one-way ANOVA test** will be used to compare performance of different competitive cars with MechaCar.
 
-**Data:** To use to ```aov()``` function in R, we need a dataframe where the data is contatined in columns, as well as the knowledge of dependent and independent variables (which will be input as ```Y ~ A + B``` where A & B are columns of independent variables and Y is the dependent variable)
+**Data:** To use to <span style="color: red">```aov()``` </span> function in R, we need a dataframe where the data is contatined in columns, as well as the knowledge of dependent and independent variables (which will be input as <span style="color: red">```Y ~ A + B``` </span> where A & B are columns of independent variables and Y is the dependent variable)
