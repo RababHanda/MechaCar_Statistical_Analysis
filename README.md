@@ -26,7 +26,7 @@
 
 #### Total Summary Table
 <p align="left">
-<img src="/Resources/total_summary.png" width="60%" height="15%">
+<img src="/Resources/total_summary.png" width="55%" height="12%">
 </p>
 
 * The mean and the median of all vehicles across the three lots is almost the same, therefore the distribution is symmetrical and not skewed to either side. Being normally distributed, various statistical analyses can be performed on the given data. 
@@ -36,39 +36,65 @@
 [^1]: https://careerfoundry.com/en/blog/data-analytics/standard-error-vs-standard-deviation/ 
 
 <p align="center">
-<img src="/Resources/std_variance.png" width="60%" height="30%">
+<img src="/Resources/std_variance.png" width="55%" height="30%">
 </p>
 
 #### Lot Summary Table
 <p align="left">
-<img src="/Resources/lot_summary.png" width="60%" height="30%">
+<img src="/Resources/lot_summary.png" width="60%" height="35%">
 </p>
 
 Even when the data is studied split according to the lots, the distribution remains normal, thus making it favourable for different analyses.
 
-`The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?`
+`1. The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?`
 * Across all 3 lots, the variance of the suspension coil is 62 PSI, which is well below 100 PSI (as seen in Total Summary table).
 * However, when studied individually, the vehicles in Lot 3 have a variance of 170 PSI, which is significantly aobe the 100 PSI limit (as seen in Lot Summary table). Thus, **Lot 3 doesn't meet the design specification.** 
 
 
 ## T-Tests on Suspension Coils
 
+This analysis assumes a significance level of 0.05% and the following hypotheses:
+<p align="center">
+<img src="/Resources/hypothesis_testing_ttest.png" width="55%" height="15%">
+</p>
+
 #### T-test for entire data
 <p align="center">
 <img src="/Resources/t_test.png" width="40%" height="30%">
 </p>
 
+| Attribute | Conclusion |
+| --- | --- |
+| p-value = 0.06028 <br> More than significance level | CANNOT reject null hypothesis(H<sub>0</sub>) |
+
+
 #### T-test for Lot 1
 <p align="center">
-<img src="/Resources/lot_1_ttest.png" width="40%" height="30%">
+<img src="/Resources/lot_1_ttest.png" width="50%" height="35%">
 </p>
+
+| Attribute | Conclusion |
+| --- | --- |
+| p-value = 1 <br> More than significance level | CANNOT reject null hypothesis(H<sub>0</sub>) |
 
 #### T-test for Lot 2
 <p align="center">
 <img src="/Resources/lot_2_ttest.png" width="40%" height="30%">
 </p>
 
+| Attribute | Conclusion |
+| --- | --- |
+| p-value = 0.06072 <br> More than significance level | CANNOT reject null hypothesis(H<sub>0</sub>) |
+
 #### T-test for Lot 3
 <p align="center">
 <img src="/Resources/lot_3_ttest.png" width="40%" height="30%">
 </p>
+
+| Attribute | Conclusion |
+| --- | --- |
+| p-value = 0.04168 <br> More than significance level | CAN reject null hypothesis(H<sub>0</sub>) |
+
+Therefore, in the case of Lot 3, there is a statistical difference between the observed sample mean and its presumed population mean.
+
+## Study Design: MechaCar vs Competition
